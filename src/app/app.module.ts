@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ParametersComponent } from './components/parameters/parameters.component';
+import { VisualizationComponent } from './components/visualization/visualization.component';
+import { TspService } from './services/tsp-service.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, ParametersComponent, VisualizationComponent],
+  imports: [BrowserModule, FormsModule],
+  providers: [TspService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

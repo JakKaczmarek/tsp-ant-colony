@@ -1,0 +1,27 @@
+<div>
+  <h2>Parametry Algorytmu Mrówkowego</h2>
+  <div class="form-group">
+    <label for="numberOfAnts">Liczba mrówek:</label>
+    <input id="numberOfAnts" type="number" [(ngModel)]="numberOfAnts" />
+  </div>
+  <div class="form-group">
+    <label for="evaporationRate"
+      >Współczynnik parowania feromonów ( od 0 do 1):</label
+    >
+    <input
+      id="evaporationRate"
+      type="number"
+      step="0.1"
+      [(ngModel)]="evaporationRate"
+    />
+  </div>
+  <div class="form-group">
+    <label for="alpha">Alpha:</label>
+    <input id="alpha" type="number" [(ngModel)]="alpha" />
+  </div>
+  <div class="form-group">
+    <label for="beta">Beta:</label>
+    <input id="beta" type="number" [(ngModel)]="beta" />
+  </div>
+  <button (click)="applyParameters()">Zastosuj</button>
+</div>
